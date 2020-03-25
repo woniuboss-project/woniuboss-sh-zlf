@@ -11,7 +11,8 @@ class Service:
 	def get_session(cls):
 		base_info = Utility.get_json('../config/base.conf')
 		login_url = "%s://%s:%s/%s/" %(base_info['PROTOCOL'],base_info['HOSTNAME'],base_info['PORT'],base_info['AURL'])
-		login_data = {"username":base_info["USERNAME"],"password":base_info["PASSWORD"],"verifycode":base_info["VERIFYCODE"]}
+		# login_url='http://192.168.176.128:8080/WoniuBoss2.5/log/userLogin'
+		login_data = {"userName":base_info["USERNAME"],"userPass":base_info["PASSWORD"],"checkcode":base_info["VERIFYCODE"]}
 		session = requests.session()
 		session.post(login_url,login_data)
 		return session
