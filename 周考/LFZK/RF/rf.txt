@@ -1,0 +1,64 @@
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Test Cases ***
+login
+    Open Browser    https://snailpet.com/
+    Sleep    3
+    Click Element    css=.red_btn
+    Sleep    3
+    Input Text    name=phone    17710414056
+    Input Password    name=password    woniu123
+    Click Link    css=.ori-btn
+    sleep    5
+    Page Should Contain Link    安全退出
+
+logout
+    Open Browser    https://snailpet.com/
+    Sleep    3
+    Click Element    css=.red_btn
+    Sleep    3
+    Input Text    name=phone    17710414056
+    Input Password    name=password    woniu123
+    Click Link    css=.ori-btn
+    sleep    5
+    Click Link    css=.quit
+    Click Element    css=.layui-layer-btn0
+    Page Should Contain Element    css=.big_title
+
+msglogin
+    Open Browser    https://snailpet.com/
+    Sleep    3
+    Click Element    css=.red_btn
+    Sleep    3
+    Click Link    css=.cla-login-right > a:nth-child(1)
+    Input Text    name=phone    17710414056
+    Input Text    css=input.cla-tex:nth-child(2)    1360
+    Click Link    css=.ori-btn
+    sleep    5
+    Page Should Contain Link    安全退出
+
+income
+    Open Browser    https://snailpet.com/
+    Sleep    3
+    Click Element    css=.red_btn
+    Sleep    3
+    Input Text    name=phone    17710414056
+    Input Password    name=password    woniu123
+    Click Link    css=.ori-btn
+    sleep    5
+    Click Element    xpath=/html/body/app-root/div/snail-menu-nav/div/a[1]/div[1]
+    sleep    3
+    Page Should Contain Element    css=.big_title
+
+pay
+    Open Browser    https://snailpet.com/
+    Sleep    3
+    Click Element    css=.red_btn
+    Sleep    3
+    Input Text    name=phone    17710414056
+    Input Password    name=password    woniu123
+    Click Link    css=.ori-btn
+    sleep    5
+    Click Element    xpath=/html/body/app-root/div/snail-menu-nav/div/a[6]
+    Page Should Contain Element    css=.count > span:nth-child(1)

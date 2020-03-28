@@ -1,0 +1,21 @@
+ActionWoniuShop.c(21): body:{"error":1,"data":null,"code":6001,"message":"服务繁忙 code:LT001"}
+ActionWoniuShop.c(22): header POST /v2/Passport/login HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Referer: https://snailpet.com/index
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
+Accept: */*
+Host: snailpet.com
+Content-Length: 60
+Connection: Keep-Alive
+Cache-Control: no-cache
+
+ActionWoniuShop.c(25): login success
+ActionWoniuShop.c(65): action success
+ActionWoniuShop.c(95): action success
+ActionWoniuShop.c(124): action success
+ActionWoniuShop.c(152): action success
+ActionWoniuShop.c(153): Error: A transaction end name was not specified.
+Error: Vuser started transaction "sort", but did not reach a corresponding end transaction statement. The transaction ended automatically with status 'fail'.
+Vuser Terminated.
